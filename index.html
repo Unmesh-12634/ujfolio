@@ -1,0 +1,692 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Unmesh Joshi's Portfolio</title>
+        <link rel="website icon" type="png" href="aaaaaaaaaaaa.png">
+        <style>
+            *{
+        margin: 0%;
+        padding: 0%;
+        box-sizing: border-box;
+        font-family: gilroy;
+    }
+    html,body{
+        scroll-behavior: smooth;
+        height: 100%;
+        width: 100%;
+    }
+    #main{
+        position: relative;
+        overflow: hidden;
+         background-color: #ffeded
+    }
+    #page{
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+     
+    }
+    #page1{
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+        padding: 0 5%
+   
+    }
+    #page2{
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+
+    }
+    #page3{
+        position: relative;
+        height: 100vh;
+        width: 100vw;
+      
+    }
+    #page2, #page3 {
+  pointer-events: auto !important;
+  background-color: transparent;
+  z-index: 9;
+}
+a {
+  position: relative;
+  z-index: 3;
+  text-decoration: none;
+  font-family: inherit;
+}
+    
+
+   canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 8; 
+  pointer-events: none; 
+}
+
+    #loop{
+        display: flex;
+        position: absolute;
+        top: 30%;
+        height: 25%;
+        width: 100%;
+        font-size: 100px;
+        white-space: nowrap;
+        font-family: gilroy;
+    }
+    #loop>h1{
+        font-weight: 400;
+        animation-name: anim;
+        animation-duration: 15s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+    #loop>h1>span{
+        -webkit-text-stroke: 1.2px #000;
+        color: transparent;
+        font-weight: 500;
+    }
+    @keyframes anim{
+        0%{
+            transform: translateX(0%);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+    }
+    #nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 7%;
+        width: 100%;
+        position: fixed;
+        z-index: 99;
+        padding: 0px 30px;
+    }
+   
+    #nav>h3{
+        font-family: gilroy;
+        font-weight: 400;
+        font-size: 22px;
+    }
+    #nav>button{
+        padding: 10px 20px;
+        border-radius: 50px;
+        background-color: #000;
+        color: #fff;
+        border: none;
+    }
+    #page>h3{
+        position: absolute;
+        top: 55%;
+        font-family: gilroy;
+        font-weight: 400;
+        color: #7c7c7c;
+        left: 5%;
+    }
+    #page>h4{
+        position: absolute;
+        top: 62%;
+        left: 25%;
+        font-family: gilroy;
+        font-weight: 500;
+    }
+    #page>#right-text{
+        position: absolute;
+        top: 60%;
+        right: 10%;
+    }
+    #page>#right-text>h3{
+        font-weight: 400;
+        color: #7c7c7c;
+    }
+    #page>#right-text>h1{
+        line-height: 1.5;
+        font-size: 50px;
+    }
+
+    #page1>#right-text{
+        position: absolute;
+        top: 30%;
+        left: 3%;
+    }
+    #page1>#right-text>h3{
+        font-weight: 400;
+        color: #7c7c7c;
+    }
+    #page1>#right-text>h1{
+        line-height: 1.5;
+        font-size: 50px;
+    }
+    #page1>#left-text{
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        text-align: end;
+    }
+    #page1>#left-text>h1{
+        font-size: 50px;
+        line-height: 1.5;
+    }
+    #page1>#left-text>h3{
+        color: #7c7c7c;
+        font-weight: 400;
+    }
+    #page2>#text1{
+        position: absolute;
+        top: 30%;
+        left: 10%;
+    }
+    #page2>#text1>h3{
+        color: #7c7c7c;
+        font-weight: 400;
+    }
+    #page2>#text1>h1{
+        font-size: 60px;
+        line-height: 1.5;
+    }
+    #page2>#text2{
+        position: absolute;
+        top: 55%;
+        right: 10%;
+        text-align: end;
+    }
+    #page2>#text2>p{
+        color: #7c7c7c;
+        font-weight: 400;
+    }
+    #page3>#text3{
+        position: absolute;
+        top: 40%;
+        right: 5%;
+        text-align: end;
+    }
+    #page3>#text3>h3{
+        color: #7c7c7c;
+        font-weight: 400;
+    }
+    #page3>#text3>h1{
+        font-size: 70px;
+
+    }
+.animated-button {
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform; 
+}
+
+.animated-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}/* --- FOOTER STYLE --- */
+#footer {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000; 
+    color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: gilroy;
+}
+#footer h1 {
+    font-size: 3vw;
+    font-weight: 500;
+}
+#footer p {
+    margin-top: 1rem;
+    font-size: 1vw;
+    color: #7c7c7c;
+}
+
+/* From Uiverse.io by Nawsome */ 
+.pl {
+  box-shadow: 2em 0 2em rgba(0, 0, 0, 0.2) inset, -2em 0 2em rgba(255, 255, 255, 0.1) inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transform: rotateX(30deg) rotateZ(45deg);
+  width: 14em;
+  height: 14em;
+  color: white;
+}
+
+.pl, .pl__dot {
+  border-radius: 50%;
+}
+
+.pl__dot {
+  animation-name: shadow724;
+  box-shadow: 0.1em 0.1em 0 0.1em black, 0.3em 0 0.3em rgba(0, 0, 0, 0.5);
+  top: calc(50% - 0.75em);
+  left: calc(50% - 0.75em);
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.pl__dot, .pl__dot:before, .pl__dot:after {
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  position: absolute;
+}
+
+.pl__dot:before, .pl__dot:after {
+  content: "";
+  display: block;
+  left: 0;
+  width: inherit;
+  transition: background-color var(--trans-dur);
+}
+
+.pl__dot:before {
+  animation-name: pushInOut1724;
+  background-color: var(--bg);
+  border-radius: inherit;
+  box-shadow: 0.05em 0 0.1em rgba(255, 255, 255, 0.2) inset;
+  height: inherit;
+  z-index: 1;
+}
+
+.pl__dot:after {
+  animation-name: pushInOut2724;
+  background-color: var(--primary1);
+  border-radius: 0.75em;
+  box-shadow: 0.1em 0.3em 0.2em rgba(255, 255, 255, 0.4) inset, 0 -0.4em 0.2em #2e3138 inset, 0 -1em 0.25em rgba(0, 0, 0, 0.3) inset;
+  bottom: 0;
+  clip-path: polygon(0 75%, 100% 75%, 100% 100%, 0 100%);
+  height: 3em;
+  transform: rotate(-45deg);
+  transform-origin: 50% 2.25em;
+}
+
+.pl__dot:nth-child(1) {
+  transform: rotate(0deg) translateX(5em) rotate(0deg);
+  z-index: 5;
+}
+
+.pl__dot:nth-child(1), .pl__dot:nth-child(1):before, .pl__dot:nth-child(1):after {
+  animation-delay: 0s;
+}
+
+.pl__dot:nth-child(2) {
+  transform: rotate(-30deg) translateX(5em) rotate(30deg);
+  z-index: 4;
+}
+
+.pl__dot:nth-child(2), .pl__dot:nth-child(2):before, .pl__dot:nth-child(2):after {
+  animation-delay: -0.1666666667s;
+}
+
+.pl__dot:nth-child(3) {
+  transform: rotate(-60deg) translateX(5em) rotate(60deg);
+  z-index: 3;
+}
+
+.pl__dot:nth-child(3), .pl__dot:nth-child(3):before, .pl__dot:nth-child(3):after {
+  animation-delay: -0.3333333333s;
+}
+
+.pl__dot:nth-child(4) {
+  transform: rotate(-90deg) translateX(5em) rotate(90deg);
+  z-index: 2;
+}
+
+.pl__dot:nth-child(4), .pl__dot:nth-child(4):before, .pl__dot:nth-child(4):after {
+  animation-delay: -0.5s;
+}
+
+.pl__dot:nth-child(5) {
+  transform: rotate(-120deg) translateX(5em) rotate(120deg);
+  z-index: 1;
+}
+
+.pl__dot:nth-child(5), .pl__dot:nth-child(5):before, .pl__dot:nth-child(5):after {
+  animation-delay: -0.6666666667s;
+}
+
+.pl__dot:nth-child(6) {
+  transform: rotate(-150deg) translateX(5em) rotate(150deg);
+  z-index: 1;
+}
+
+.pl__dot:nth-child(6), .pl__dot:nth-child(6):before, .pl__dot:nth-child(6):after {
+  animation-delay: -0.8333333333s;
+}
+
+.pl__dot:nth-child(7) {
+  transform: rotate(-180deg) translateX(5em) rotate(180deg);
+  z-index: 2;
+}
+
+.pl__dot:nth-child(7), .pl__dot:nth-child(7):before, .pl__dot:nth-child(7):after {
+  animation-delay: -1s;
+}
+
+.pl__dot:nth-child(8) {
+  transform: rotate(-210deg) translateX(5em) rotate(210deg);
+  z-index: 3;
+}
+
+.pl__dot:nth-child(8), .pl__dot:nth-child(8):before, .pl__dot:nth-child(8):after {
+  animation-delay: -1.1666666667s;
+}
+
+.pl__dot:nth-child(9) {
+  transform: rotate(-240deg) translateX(5em) rotate(240deg);
+  z-index: 4;
+}
+
+.pl__dot:nth-child(9), .pl__dot:nth-child(9):before, .pl__dot:nth-child(9):after {
+  animation-delay: -1.3333333333s;
+}
+
+.pl__dot:nth-child(10) {
+  transform: rotate(-270deg) translateX(5em) rotate(270deg);
+  z-index: 5;
+}
+
+.pl__dot:nth-child(10), .pl__dot:nth-child(10):before, .pl__dot:nth-child(10):after {
+  animation-delay: -1.5s;
+}
+
+.pl__dot:nth-child(11) {
+  transform: rotate(-300deg) translateX(5em) rotate(300deg);
+  z-index: 6;
+}
+
+.pl__dot:nth-child(11), .pl__dot:nth-child(11):before, .pl__dot:nth-child(11):after {
+  animation-delay: -1.6666666667s;
+}
+
+.pl__dot:nth-child(12) {
+  transform: rotate(-330deg) translateX(5em) rotate(330deg);
+  z-index: 6;
+}
+
+.pl__dot:nth-child(12), .pl__dot:nth-child(12):before, .pl__dot:nth-child(12):after {
+  animation-delay: -1.8333333333s;
+}
+
+.pl__text {
+  font-size: 0.75em;
+  max-width: 5rem;
+  position: relative;
+  text-shadow: 0 0 0.1em var(--fg-t);
+  transform: rotateZ(-45deg);
+}
+
+/* Animations */
+@keyframes shadow724 {
+  from {
+    animation-timing-function: ease-in;
+    box-shadow: 0.1em 0.1em 0 0.1em black, 0.3em 0 0.3em rgba(0, 0, 0, 0.3);
+  }
+
+  25% {
+    animation-timing-function: ease-out;
+    box-shadow: 0.1em 0.1em 0 0.1em black, 0.8em 0 0.8em rgba(0, 0, 0, 0.5);
+  }
+
+  50%, to {
+    box-shadow: 0.1em 0.1em 0 0.1em black, 0.3em 0 0.3em rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes pushInOut1724 {
+  from {
+    animation-timing-function: ease-in;
+    background-color: var(--bg);
+    transform: translate(0, 0);
+  }
+
+  25% {
+    animation-timing-function: ease-out;
+    background-color: var(--primary2);
+    transform: translate(-71%, -71%);
+  }
+
+  50%, to {
+    background-color: var(--bg);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes pushInOut2724 {
+  from {
+    animation-timing-function: ease-in;
+    background-color: var(--bg);
+    clip-path: polygon(0 75%, 100% 75%, 100% 100%, 0 100%);
+  }
+
+  25% {
+    animation-timing-function: ease-out;
+    background-color: var(--primary1);
+    clip-path: polygon(0 25%, 100% 25%, 100% 100%, 0 100%);
+  }
+
+  50%, to {
+    background-color: var(--bg);
+    clip-path: polygon(0 75%, 100% 75%, 100% 100%, 0 100%);
+  }
+}
+#preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e0e0e0;
+            font-size: 4vw;
+            font-weight: 600;
+            letter-spacing: 2px;
+            /* Glass Black Effect */
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+        }
+
+        .preloader-text {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .preloader-text .name-part {
+            overflow: hidden; 
+        }
+
+        .preloader-text .char {
+            display: inline-block;
+            transform: translateY(110%); 
+            transition: transform 0.5s;
+        }
+        .preloader-text {
+    flex-direction: column;
+    align-items: center; 
+}
+
+.portfolio-line {
+
+    font-size: 0.6em;
+    margin-top: 0.2em;
+    font-weight: 400; 
+    letter-spacing: 1px;
+}
+        
+        </style>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    </head>
+    <body>
+
+        <div id="preloader">
+       <div class="preloader-text">
+    <div class="name-part">
+        <span class="char">U</span><span class="char">n</span><span class="char">m</span><span class="char">e</span><span class="char">s</span><span class="char">h</span>
+        <span class="char">&nbsp;</span>
+        <span class="char">J</span><span class="char">o</span><span class="char">s</span><span class="char">h</span><span class="char">i</span><span class="char">'</span><span class="char">s</span>
+    </div>
+    <div class="name-part portfolio-line">
+        <span class="char">P</span><span class="char">o</span><span class="char">r</span><span class="char">t</span><span class="char">f</span><span class="char">o</span><span class="char">l</span><span class="char">i</span><span class="char">o</span>
+    </div>
+</div>
+    </div>
+
+
+        <div id="nav">
+            <h3><b>UNMESH </b> JOSHI</h3>
+        <button class="animated-button">Portfolio</button>
+
+        </div>
+        <div id="main">
+        <div id="page">
+        <div id="loop">
+            <h1>
+                <b>WELCOME</b> TO MY <b><i>PORTFOLIO</i></b> <span>SITE</span> – 
+                <span><i>SCROLL TO EXPLORE</i></span>
+            </h1>
+        </div>
+
+        <h3>
+            I'm a Full Stack Developer with hands-on experience in frontend,<br>
+            backend, and database technologies.<br>
+            Passionate about building responsive web applications and solving<br>
+            real-world problems through code.
+        </h3><br><br>
+        <div id="right-text" ><h4>...SCROLL TO BEGIN</h4></div>
+        
+
+        <canvas></canvas>
+    </div>
+
+        <div id="page1">
+        <div id="right-text">
+            <h3>ABOUT ME</h3>
+            <h1>
+                I'M UNMESH Joshi<br>
+                PASSIONATE DEVELOPER<br>
+                2ND YEAR CSE STUDENT
+            </h1>
+        </div>
+
+        <div id="left-text">
+            <h1>
+                BUILD SOLUTIONS<br>
+                WRITE CLEAN CODE<br>
+                KEEP LEARNING
+            </h1>
+            <h3>Driven by logic, creativity, and continuous growth.</h3>
+        </div>
+    </div>
+
+    <div id="page2">
+        <div id="text1">
+            <h3>PROJECT</h3>
+            <h1>
+                KRISHNA <br>DEVOTION<br>
+            </h1>
+        </div>
+
+        <div id="text2">
+            <p>
+                A full-stack devotional website developed using <br>
+                HTML, CSS, JavaScript, Flask, and MySQL.<br><br>
+                <b>Features:</b><br>
+                • User feedback with star ratings<br>
+                • Secure session handling<br>
+                • Dynamic content rendering via Flask backend.
+            </p>
+
+            <div style="margin-top: 20px;">
+               <div style="margin-top: 20px;">
+  <a href="https://unmesh-12634.github.io/Krishnam/" target="_blank"class="animated-button"
+     style="margin-right: 10px; padding: 10px 20px; border-radius: 50px; background-color: #000; color: #fff; text-decoration: none; font-family: inherit; display: inline-block; transition: background-color 0.3s; ">
+    Live Demo
+  </a>
+
+  <a href="https://github.com/Unmesh-12634/Krishnam" target="_blank" class="animated-button"
+     style="padding: 10px 20px; border-radius: 50px; background-color: #000; color: #fff; text-decoration: none; font-family: inherit; display: inline-block; transition: background-color 0.3s;">
+    Source Code
+  </a>
+</div>
+
+            </div>
+        </div>
+    </div>
+        <div id="page3">
+  <div id="text3">
+    <h3>GET IN TOUCH</h3>
+    <h1>
+      LET’S<br>
+      CONNECT<br>
+      COLLABORATE
+    </h1>
+    <p style="color: #7c7c7c; font-size: 18px; margin-top: 20px;">
+      Feel free to reach out for collaboration, internships,<br>
+      or just to say hello!
+    </p>
+
+    <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap; justify-content: flex-end;">
+
+        <a href="mailto:unmeshjoshi083@gmail.com" target="_blank" class="animated-button"
+        style="padding: 10px 20px; background-color: #000; color: #fff; border-radius: 50px; text-decoration: none; font-family: inherit; display: inline-block;">
+        📧 Email
+      </a>
+
+      <a href="https://www.linkedin.com/in/unmesh-joshi-b0846431b/" target="_blank" class="animated-button"
+        style="padding: 10px 20px; background-color: #000; color: #fff; border-radius: 50px; text-decoration: none; font-family: inherit; display: inline-block;">
+        🔗 LinkedIn
+      </a>
+    </div>
+  </div>
+  
+  
+</div>
+ <div id="footer">
+
+    <h1>UNMESH JOSHI</h1>
+    <p>&copy; 2025</p>
+
+     <div class="pl" >
+	<div class="pl__dot"></div>
+	<div class="pl__dot"></div>
+	<div class="pl__dot"></div>
+	<div class="pl__dot"></div>
+	<div class="pl__dot"></div>
+	<div class="pl__dot"></div>
+	<div class="pl__dot"></div>
+	<div class="pl__dot"></div>
+	<div class="pl__dot"></div>
+	<div class="pl__dot"></div>
+	<div class="pl__dot"></div>
+	<div class="pl__dot"></div>
+    <div class="pl__text"><h1>Uj</h1></div>
+	
+
+</div>
+        </div>
+        </div>
+          <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MotionPathPlugin.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="script.js"></script>
+        <scrpit></scrpit>
+        
+    </body>
+    </html>
