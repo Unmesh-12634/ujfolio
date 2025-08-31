@@ -409,20 +409,20 @@ ScrollTrigger.create({
   trigger: "#page>canvas",
   pin: true,
   // markers:true,
-  scroller: `#main`,
-  start: `top top`,
-  end: `600% top`,
+  scroller: '#main',
+  start: 'top top',
+  end: '600% top',
 });
 
 
 
 gsap.to("#page1",{
   scrollTrigger:{
-    trigger:`#page1`,
-    start:`top top`,
-    end:`bottom top`,
+    trigger:'#page1',
+    start:'top top',
+    end:'bottom top',
     pin:true,
-    scroller:`#main`
+    scroller:'#main'
   }
 })
 gsap.to("#page2",{
@@ -465,7 +465,8 @@ function initPreloader() {
             const tl = gsap.timeline();
 
             tl.to(chars, {
-                y: 0,
+         
+              y: 0,
                 stagger: 0.05,
                 delay: 0.2,
                 duration: 1.2,
@@ -496,3 +497,4 @@ function initPreloader() {
             window.addEventListener('load', onPageLoad);
         }
         initPreloader();
+        
